@@ -1,7 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import {Categories, Characters, Character} from '../screens';
-import { colors } from "../constants/themes/colors"
+import { COLORS } from "../constants/themes/colors"
+import { isAndroid } from '../utils';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,12 +13,15 @@ const GameNavigator = () => {
         initialRouteName='Categories'
         screenOptions={{
             headerStyle: {
-                backgroundColor: colors.backgroundDark,
+                backgroundColor: isAndroid ? COLORS.backgroundDark : COLORS.background,
             },
-            headerTintColor: colors.header,
+            headerTintColor: COLORS.header,
             headerTitleStyle: {
                 fontFamily: 'Mina-Bold',
-            }
+            },
+            presentation: 'card',
+            headerBackTitle: '',
+
         }}
         >
             <Stack.Screen 
@@ -26,8 +31,20 @@ const GameNavigator = () => {
                 headerShown: false,
             }} 
             />
-            <Stack.Screen name='Characters' component={Characters} />
-            <Stack.Screen name='Character' component={Character} />
+            <Stack.Screen 
+            name='Characters' 
+            component={Characters} 
+            options={({ route }) => ({
+                title: route.params.title,
+            })}
+            />
+            <Stack.Screen 
+            name='Character' 
+            component={Character}
+            options={({ route }) => ({
+                title: route.params.title,
+            })} 
+            />
         </Stack.Navigator>
     )
 }

@@ -1,19 +1,36 @@
 import React from "react";
-import {View, Text, Button} from 'react-native'
+import { SafeAreaView, FlatList} from 'react-native'
+import { CATEGORIES }   from '../../constants/data/index';
 import {styles} from "./styles"
-import { colors } from "../../constants/themes/colors"
+import { CategoryItem } from "../../components";
 
-const Categories = ({navigation}) => {
+const Categories = ({navigation, route}) => {
+    const onSelected = (item) => {
+        navigation.navigate('Characters', { categoryId: item.id, title: item.title, color: item.color })
+    };
+    const renderItem = ({ item }) => <CategoryItem item={item} onSelected={onSelected}/>;
     return(
-        <View style={styles.container}>
-            <Text style={styles.title}> Categories </Text> 
-            <Button 
-                title= "Go to Characters"
-                color= {colors.primary}       
-                onPress= {() => navigation.navigate('Characters')}
+        <SafeAreaView style={styles.container}>
+            <FlatList
+                    data={CATEGORIES}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id.toString()}
+                    style={styles.contentList}
             />
-        </View>
-    )
-}
+        </SafeAreaView>
+    );
+};
 
 export default Categories;
+
+
+
+
+// <View style={styles.container}>
+// <Text style={styles.title}> Categories </Text> 
+// <Button 
+//     title= "Go to Characters"
+//     color= {COLORS.primary}       
+//     onPress= {() => navigation.navigate('Characters')}
+// />
+// </View>
