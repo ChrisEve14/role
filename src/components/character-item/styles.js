@@ -8,22 +8,19 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         marginVertical: 10,
         borderRadius: 10,
-        height: 100,
+        height: 150,
     },
     item:{
         flex: 1,
         justifyContent: 'space-around',
     },
     title:{
-        fontFamily: 'Indie',
-        fontSize: 20,
+        fontFamily: 'Mina',
+        fontSize: 22,
     },
     detailContainer:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-    },
-    price:{
-        fontFamily: 'Indie',
     },
     description:{
         fontFamily: 'Indie',

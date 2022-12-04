@@ -6,12 +6,7 @@ export const styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: COLORS.background,
-        marginTop: isAndroid ? StatusBar.currentHeight : 0,
-    },
-    title:{
-        fontFamily: 'Satisfy',
-        fontSize: 32,
-        color: COLORS.black,
+        // marginTop: isAndroid ? StatusBar.currentHeight : 0,
     },
     containerList: {
         flex: 1,

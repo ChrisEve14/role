@@ -2,41 +2,41 @@ export const CATEGORIES = [
     {
         id: 1,
         title: 'Holloway',
-        color: '#C6CAED',
+        color: '#fff1e6',
     },
     {
         id: 2,
         title: 'Barnes',
-        color: '#ADA8BE',
+        color: '#F8EDEB',
     },
     {
         id: 3,
         title: 'Waylen',
-        color: '#A28497',
+        color: '#E8E8E4',
     },
     {
         id: 4,
         title: 'Ward',
-        color: '#8896AB',
+        color: '#D8E2DC',
     },
     {
         id: 5,
         title: 'Marino',
-        color: '#C5D5E4',
+        color: '#ECE4DB',
     },
     {
         id: 6,
         title: 'Oakley',
-        color: '#F0B5B3',
+        color: '#FFE5D9',
     },
     {
         id: 7,
         title: 'Turner',
-        color: '#F0B5B3',
+        color: '#FFD7BA',
     },
     {
         id: 8,
         title: 'Roderick',
-        color: '#F0B5B3',
+        color: '#FEC89A',
     },
 ]

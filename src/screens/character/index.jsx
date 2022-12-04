@@ -15,8 +15,6 @@ const Character = ({navigation, route}) => {
             <Text style={styles.title}>{title}</Text> 
             <Text style={styles.description}>{description}</Text> 
             <Image source={{ uri:image }} style={{width: 300, height:400, marginTop: 20 }}/>
-    
-
         </View>
     )
 }

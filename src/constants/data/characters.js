@@ -73,7 +73,7 @@ export const CHARACTERS = [
         categoryId: 6,
         title: 'Genevieve',
         description: 'MEd Early Childhood. BS Child Development 🍏 Bailee 🤎🐾 Fitness + food 💦 🍣 I can make a mean cocktail🍸 Queen of karaoke🎤',
-        image:'https://www.usmagazine.com/wp-content/uploads/2022/02/ashley-greene.png?quality=86&strip=all',
+        image:'https://i.pinimg.com/736x/e7/ae/f7/e7aef7b725605eaa775694de3df5fa7c.jpg',
     },
     {
         id: 12,

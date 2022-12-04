@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     },
     title:{
         fontSize: 18,
-        fontFamily: 'Indie',
+        fontFamily: 'Mina',
         color: COLORS.black,
     },
 });

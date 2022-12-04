@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.background,
     },
     title:{
-        fontFamily: 'Satisfy',
+        fontFamily: 'Mina',
         fontSize: 32,
         color: COLORS.black,
     },

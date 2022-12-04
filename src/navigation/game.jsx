@@ -10,12 +10,12 @@ const Stack = createNativeStackNavigator();
 const GameNavigator = () => {
     return(
         <Stack.Navigator 
-        initialRouteName='Categories'
+        initialRouteName='Cove Haven'
         screenOptions={{
             headerStyle: {
-                backgroundColor: isAndroid ? COLORS.backgroundDark : COLORS.background,
+                backgroundColor: isAndroid ? COLORS.header : COLORS.headerDark,
             },
-            headerTintColor: COLORS.header,
+            headerTintColor: COLORS.black,
             headerTitleStyle: {
                 fontFamily: 'Mina-Bold',
             },
@@ -25,10 +25,11 @@ const GameNavigator = () => {
         }}
         >
             <Stack.Screen 
-            name='Categories' 
+            name='Cove Haven' 
             component={Categories}
             options={{
-                headerShown: false,
+                // headerShown: false,
+                headerTitleAlign: 'center',
             }} 
             />
             <Stack.Screen 
