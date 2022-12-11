@@ -6,7 +6,8 @@ export const CHARACTERS = [
         description: 'Co-founder of W&P🍷🎨  CEO of The Willow Foundation  💼👠 Olive, Kade & Low lover 🐾 Married to Kaden Holloway 💍 Mother of Spawns 💛💚',
         image: 'https://labiode.com/wp-content/uploads/2021/05/Madelaine-Petsch.jpg',
     },
-    {id: 2,
+    {
+        id: 2,
         categoryId: 1,
         title: 'Kaden',
         description: '• Lawyer 🖋️• Miami Life 🏖️',
