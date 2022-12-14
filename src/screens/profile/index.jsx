@@ -4,7 +4,7 @@ import { styles } from './styles';
 import { ProfileItem } from '../../components';
 
 const Profile = ({ navigation }) => {
-    const profile = useSelector((state) => state.profile.characters);
+    const profile = useSelector((state) => state.profile.items);
     const onDelete = (id) => {
         console.warn('Delete', id);
     }
