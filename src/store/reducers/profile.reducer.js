@@ -2,25 +2,25 @@ import { profileTypes } from '../types';
 const { ADD_TO_PROFILE, REMOVE_FROM_PROFILE, CONFIRM_ADDITION} = profileTypes;
 
 const initialState = {
-    characters: [],
+    items: [],
 };
 
 const profileReducer = ( state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_PROFILE:
             let updatedProfile = [];
-            if(state.characters.find((character)=> character.id === action.character.id)){
-                updatedProfile = state.characters.map((character) => {
-                    if(character.id === action.character.id) character.quantity += 1;
-                    return character;
+            if(state.items.find((item)=> item.id === action.item.id)){
+                updatedProfile = state.items.map((item) => {
+                    if(item.id === action.item.id) item.quantity += 1;
+                    return item;
                 });
             } else {
-                const character = { ...state.character, quantity: 1};
-                updatedProfile = [ ...state.characters, character];
+                const item = { ...state.item, quantity: 1};
+                updatedProfile = [ ...state.items, item];
             }
             return {
                 ...state,
-                characters: updatedProfile,
+                items: updatedProfile,
             }
         default:       
             return state;
