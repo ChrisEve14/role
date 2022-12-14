@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {View, Text, Image, Button, ScrollView} from 'react-native';
 import { useSelector, useDispatch } from "react-redux";
 import { addToProfile } from "../../store/actions";
@@ -9,10 +10,14 @@ const Character = ({navigation}) => {
     const dispatch = useDispatch();
     const character = useSelector((state) => state.characters.selected);
    
+
+    const [ disabled, setDisabled ] = useState(false);
+
     const { title, description, image } = character || {};
 
     const onAddToProfile = () => {
         dispatch(addToProfile(character));
+        setDisabled(true);
     };
 
     return(
@@ -28,9 +33,10 @@ const Character = ({navigation}) => {
                     />
                 <Button
                     title="Add to Profile"
-                    onPress={onAddToProfile}
+                    onPress={onAddToProfile} 
                     color={COLORS.icons}
-                />
+                    disabled={disabled}
+                    />
             </View>
         </ScrollView>
     )
