@@ -1,26 +1,25 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { useSelector } from 'react-redux';
 import { styles } from './styles';
 import { ProfileItem } from '../../components';
-import { PROFILE } from '../../constants/data';
 
 const Profile = ({ navigation }) => {
-
+    const profile = useSelector((state) => state.profile.characters);
     const onDelete = (id) => {
         console.warn('Delete', id);
     }
 
     const renderItem = ({ item }) => <ProfileItem item={item} onDelete={onDelete} />;
     
-    const keyExtractor = (item) => item.id.toString();
+    const keyExtractor = (item) => item.id;
 
     return (
         <View style={styles.container}>
             <View style={styles.listContainer}>
                 <FlatList
-                data={PROFILE}
+                data={profile}
                 renderItem={renderItem}
                 keyExtractor={keyExtractor}
-
                 />
             </View>
             <View style={styles.footer}>

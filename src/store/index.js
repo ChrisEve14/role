@@ -1,10 +1,13 @@
-import { createStore, combineReducers } from 'redux';
-import { categoryReducer, charactersReducer } from './reducers';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+import { categoryReducer, charactersReducer, profileReducer } from './reducers';
 
 
 const rootReducer = combineReducers ({
     characters: charactersReducer,
     category: categoryReducer,
+    profile: profileReducer,
 });
 
-export default createStore(rootReducer);
+export default createStore(rootReducer, applyMiddleware(thunk));
