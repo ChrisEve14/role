@@ -15,7 +15,7 @@ const profileReducer = ( state = initialState, action) => {
                     return item;
                 });
             } else {
-                const item = { ...state.item, quantity: 1};
+                const item = { ...action.item, quantity: 1};
                 updatedProfile = [ ...state.items, item];
             }
             return {
