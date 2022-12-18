@@ -1,4 +1,4 @@
 export const  charactersTypes = {
     SELECT_CHARACTER: 'SELECT_CHARACTER',
     FILTER_CHARACTERS: 'FILTER_CHARACTERS',
-}
+};

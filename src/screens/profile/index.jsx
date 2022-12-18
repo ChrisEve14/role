@@ -1,13 +1,19 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromProfile, confirmedProfile } from '../../store/actions';
 import { styles } from './styles';
 import { ProfileItem } from '../../components';
 
 const Profile = ({ navigation }) => {
+    const dispatch = useDispatch();
     const profile = useSelector((state) => state.profile.items);
     const onDelete = (id) => {
-        console.warn('Delete', id);
-    }
+        dispatch(removeFromProfile(id));
+    };
+    const onCreateNotif = () => {
+        dispatch(confirmedProfile(profile));
+    };
+ 
 
     const renderItem = ({ item }) => <ProfileItem item={item} onDelete={onDelete} />;
     
@@ -23,7 +29,10 @@ const Profile = ({ navigation }) => {
                 />
             </View>
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.buttonConfirm} onPress={null}>
+                <TouchableOpacity 
+                disabled={profile.length === 0} 
+                style={profile.length === 0 ? styles.buttonDisabled : styles.buttonConfirm} 
+                onPress={onCreateNotif}>
                     <Text style={styles.textButtonConfirm}>Confirm</Text>
                 </TouchableOpacity>
             </View>

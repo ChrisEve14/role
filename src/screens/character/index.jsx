@@ -19,7 +19,7 @@ const Character = ({navigation}) => {
         dispatch(addToProfile(character));
         setDisabled(true);
     };
-
+    
     return(
         <ScrollView style={styles.scroll}>
             <View style={styles.container}>

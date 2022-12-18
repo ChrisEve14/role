@@ -3,6 +3,8 @@ const { ADD_TO_PROFILE, REMOVE_FROM_PROFILE, CONFIRM_ADDITION} = profileTypes;
 
 const initialState = {
     items: [],
+    loading: false,
+    error: null,
 };
 
 const profileReducer = ( state = initialState, action) => {
@@ -21,10 +23,30 @@ const profileReducer = ( state = initialState, action) => {
             return {
                 ...state,
                 items: updatedProfile,
-            }
+            };
+        case REMOVE_FROM_PROFILE:
+            const filteredProfile = state.items.filter((item) => item.id !== action.id);
+            return {
+                ...state,
+                items: filteredProfile,
+            };
+
+        case CONFIRM_ADDITION:
+            if (action.result) {
+                return {
+                  ...state,
+                  items: [],
+                };
+              }
+              return {
+                ...state,
+                error: action.error,
+              };
+
         default:       
             return state;
-        }
+        };
 };
+
 
 export default profileReducer;

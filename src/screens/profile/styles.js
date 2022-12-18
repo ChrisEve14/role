@@ -14,6 +14,13 @@ export const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: COLORS.gray,
     },
+    buttonDisabled: {
+        backgroundColor: COLORS.gray,
+        borderRadius: 10,
+        elevation: 5,
+        paddingHorizontal: 20,
+        paddingVertical: 15,  
+    },
     buttonConfirm: {
         backgroundColor: COLORS.light,
         borderRadius: 10,
