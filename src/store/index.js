@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import { categoryReducer, charactersReducer, profileReducer, notifReducer } from './reducers';
+import { categoryReducer, charactersReducer, profileReducer, notifReducer, authReducer } from './reducers';
 
 
 const rootReducer = combineReducers ({
@@ -9,6 +9,7 @@ const rootReducer = combineReducers ({
     category: categoryReducer,
     profile: profileReducer,
     notifs: notifReducer,
+    auth: authReducer,
 });
 
 export default createStore(rootReducer, applyMiddleware(thunk));
