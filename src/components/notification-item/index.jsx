@@ -13,7 +13,7 @@ const NotificationsItem = ({ item, onDelete }) => {
             </View>
             <View style={styles.contentContainer}>
                 <View style={styles.content}>
-                    <Text style={styles.total}>Characters Added: {item.total}</Text>
+                    <Text style={styles.added}>Characters Added: {item.title}</Text>
                 </View>
                 <TouchableOpacity onPress={() => onDelete(item.id)}>
                     <FontAwesome name="trash-o" size={24} color={COLORS.icons}/>

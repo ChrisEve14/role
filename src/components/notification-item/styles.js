@@ -34,8 +34,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    content:{},
-    total:{
+    content:{
+    },
+    added:{
         fontSize: 14,
         fontFamily: 'Mina-Bold'
     },

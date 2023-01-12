@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 30,
         backgroundColor: COLORS.white,
-        minHeight: 320,
+        minHeight: 350,
     },
     title:{
         fontSize: 25,
@@ -29,18 +29,10 @@ export const styles = StyleSheet.create({
         fontFamily: 'Mina',
         marginVertical: 5,
     },
-    input:{
-        height: 45,
-        borderBottomColor: COLORS.gray,
-        borderBottomWidth: 1,
-        width: '90%',
-        fontFamily: 'Mina',
-        marginBottom: 10,
-    },
     prompt:{
         width: '100%',
         alignItems: 'center',
-        marginVertical: 15,
+        marginVertical: 5,
     },
     promptButton:{
         width: '100%',

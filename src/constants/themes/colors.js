@@ -6,5 +6,6 @@ export const COLORS = {
     background: '#f0efeb',
     header: '#faedcd',
     headerDark: '#FCD5CE',
-    icons: '#FFBF47'
+    icons: '#FFBF47',
+    red: '#ef233c',
 }
